@@ -1,10 +1,16 @@
-# VibeAILab custom build: our sources for the QGroundControl target
+# VibeAILab custom build
 
 message(STATUS "QGC: Adding VibeAILab custom build")
 
 set(CUSTOM_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabAutoPilotPlugin.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabAutoPilotPlugin.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabCorePlugin.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabCorePlugin.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePlugin.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePlugin.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePluginFactory.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePluginFactory.h
     CACHE INTERNAL "" FORCE
 )
 

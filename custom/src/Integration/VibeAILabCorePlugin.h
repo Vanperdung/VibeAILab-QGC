@@ -2,7 +2,7 @@
 
 #include "QGCCorePlugin.h"
 
-/// Core plugin for the VibeAILab build.
+/// Core plugin for the VibeAILab flight controller.
 class VibeAILabCorePlugin : public QGCCorePlugin
 {
     Q_OBJECT
