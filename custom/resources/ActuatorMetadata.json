@@ -6,7 +6,7 @@
       "subgroups": [
         {
           "per-channel-parameters": [
-            { "label": "Function", "name": "MOT_FUNC${i}", "function": "function" }
+            { "label": "Function", "name": "MOT_OUT${i}_FUNC", "function": "function" }
           ],
           "channels": [
             { "label": "Motor Output 1", "param-index": 1 },
