@@ -11,6 +11,7 @@ set(CUSTOM_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePlugin.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePluginFactory.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePluginFactory.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/vibeailab.qrc
     CACHE INTERNAL "" FORCE
 )
 

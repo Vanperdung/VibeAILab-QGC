@@ -1,6 +1,10 @@
 #pragma once
 
+#include <QtCore/QLoggingCategory>
+
 #include "AutoPilotPlugin.h"
+
+Q_DECLARE_LOGGING_CATEGORY(VibeAILabAutoPilotPluginLog)
 
 /// Setup plugin for VibeAI Lab flight controller.
 class VibeAILabAutoPilotPlugin : public AutoPilotPlugin
