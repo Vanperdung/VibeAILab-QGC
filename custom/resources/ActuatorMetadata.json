@@ -41,7 +41,17 @@
       {
         "type": "multirotor",
         "actuators": [
-          { "group-label": "Motors", "count": 4, "actuator-type": "motor", "per-item-parameters": [] }
+          {
+            "group-label": "Motors",
+            "count": 4,
+            "actuator-type": "motor",
+            "per-item-parameters": [
+              { "label": "Position X", "function": "posx", "value": [1, -1, 1, -1] },
+              { "label": "Position Y", "function": "posy", "value": [1, -1, -1, 1] },
+              { "label": "Position Z", "function": "posz", "value": [0, 0, 0, 0] },
+              { "label": "Direction CCW", "function": "spin-dir", "value": [1, 1, 0, 0] }
+            ]
+          }
         ]
       }
     ]
