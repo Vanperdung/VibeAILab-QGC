@@ -10,6 +10,7 @@
 #include "ParameterManager.h"
 #include "QGCLoggingCategory.h"
 #include "Vehicle.h"
+#include "VibeAILabSensorsComponent.h"
 
 QGC_LOGGING_CATEGORY(VibeAILabAutoPilotPluginLog, "VibeAILab.AutoPilotPlugin")
 
@@ -47,6 +48,10 @@ const QVariantList& VibeAILabAutoPilotPlugin::vehicleComponents()
         qCWarning(VibeAILabAutoPilotPluginLog) << "Components requested before parameters are ready";
         return _components;
     }
+
+    auto* const sensorsComponent = new VibeAILabSensorsComponent(_vehicle, this, this);
+    sensorsComponent->setupTriggerSignals();
+    _components.append(QVariant::fromValue(qobject_cast<VehicleComponent*>(sensorsComponent)));
 
     Actuators* const actuators = _vehicle->actuators();
     if (actuators != nullptr) {

@@ -22,7 +22,14 @@ This folder must always contain both `CMakeLists.txt` and
 | ---- | ----- |
 | `src/Integration/` | Classes QGC calls directly: core plugin, firmware plugin factory, firmware plugin, autopilot (setup) plugin |
 | `src/Features/<Name>/` | One folder per feature with its own code; its QML in `qml/` |
+| `test/<Name>/` | Tests of a feature, built only with `QGC_BUILD_TESTING` |
 | `resources/` | Data and images, bundled by `vibeailab.qrc` |
+
+## Features
+
+| Feature | Setup page | Follows |
+| ------- | ---------- | ------- |
+| `Sensors` | Sensors: Gyro Calibration, Accel Calibration | The FC's replies to the calibration command and its calibration status texts |
 
 ## Adding a feature
 
@@ -35,6 +42,9 @@ This folder must always contain both `CMakeLists.txt` and
 | Brand colours, logo | `QGCCorePlugin::paletteOverride()` + images | `src/Integration/` + `resources/` |
 | Hide or adjust settings | `QGCOptions`, `overrideSettingsGroupVisibility()`, `adjustSettingMetaData()` | `src/Integration/` |
 | QML control used by 2+ features | - | `qml/Controls/` |
+
+A feature's QML goes in its own QML module in `CMakeLists.txt`. Register a test there with
+`cmake_language(DEFER ... CALL add_qgc_test ...)`: `add_qgc_test()` is defined after this folder is read.
 
 ## Rules
 
