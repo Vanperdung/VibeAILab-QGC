@@ -7,8 +7,7 @@
 
 /// Accel Calibration as the Sensors page shows it: the run and the state of each of the 6 sides.
 ///
-/// Follows the FC's "[cal] " status texts. The texts and the rules are in the FC repo:
-/// user/docs/accel_calibration/interface-0001-fc-qgc-accel-calibration.md
+/// Follows the FC's "[cal] " status texts.
 class VibeAILabAccelCalibration : public VibeAILabCalibration
 {
     Q_OBJECT

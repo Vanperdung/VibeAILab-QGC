@@ -29,7 +29,7 @@ This folder must always contain both `CMakeLists.txt` and
 
 | Feature | Setup page | Follows |
 | ------- | ---------- | ------- |
-| `Sensors` | Sensors: Gyro Calibration, Accel Calibration | FC repo `user/docs/accel_calibration/interface-0001-fc-qgc-accel-calibration.md`; for the gyro, the FC code (`state_commander.cpp`, `gyro_calibrator.cpp`) |
+| `Sensors` | Sensors: Gyro Calibration, Accel Calibration | The FC's replies to the calibration command and its calibration status texts |
 
 ## Adding a feature
 
