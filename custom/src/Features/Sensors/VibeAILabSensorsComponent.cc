@@ -14,9 +14,9 @@ constexpr QLatin1StringView sensorsGyroSectionId("Gyroscope");
 constexpr QLatin1StringView sensorsAccelSectionId("Accelerometer");
 
 constexpr QLatin1StringView sensorsAccelOffsetParams[] = {
-    QLatin1StringView("IMU_ACCEL_OFFSET_X"),
-    QLatin1StringView("IMU_ACCEL_OFFSET_Y"),
-    QLatin1StringView("IMU_ACCEL_OFFSET_Z"),
+    QLatin1StringView("IMU_ACC_OFF_X"),
+    QLatin1StringView("IMU_ACC_OFF_Y"),
+    QLatin1StringView("IMU_ACC_OFF_Z"),
 };
 
 }  // namespace

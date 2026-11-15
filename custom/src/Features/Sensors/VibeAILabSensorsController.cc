@@ -12,7 +12,7 @@ namespace {
 
 // Params the FC sets when a calibration is done
 constexpr const char* gyroCalParamPattern = "IMU_GYRO_*";
-constexpr const char* accelCalParamPattern = "IMU_ACCEL_*";
+constexpr const char* accelCalParamPattern = "IMU_ACC_*";
 
 VibeAILabCalibration::CommandReply calibrationCommandReply(int ackResult, int failureCode)
 {

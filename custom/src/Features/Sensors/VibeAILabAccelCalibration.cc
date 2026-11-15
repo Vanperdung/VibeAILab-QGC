@@ -8,13 +8,13 @@
 namespace {
 
 constexpr QLatin1StringView accelCalTextPrefix("[cal] ");
-constexpr QLatin1StringView accelCalStartedText("calibration started");
+constexpr QLatin1StringView accelCalStartedText("accel calibration started");
 constexpr QLatin1StringView accelCalNewSidePrefix("new side: ");
 constexpr QLatin1StringView accelCalSideLostText("side lost, hold still ...");
 constexpr QLatin1StringView accelCalSideDonePrefix("side done: ");
-constexpr QLatin1StringView accelCalDoneText("calibration done");
-constexpr QLatin1StringView accelCalFailedText("calibration failed");
-constexpr QLatin1StringView accelCalCancelledText("calibration cancelled");
+constexpr QLatin1StringView accelCalDoneText("accel calibration done");
+constexpr QLatin1StringView accelCalFailedText("accel calibration failed");
+constexpr QLatin1StringView accelCalCancelledText("accel calibration cancelled");
 
 struct AccelCalPose
 {

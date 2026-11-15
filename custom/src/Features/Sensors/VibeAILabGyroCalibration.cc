@@ -4,9 +4,9 @@
 
 namespace {
 
-constexpr QLatin1StringView gyroCalStartedText("Gyro calibration started");
-constexpr QLatin1StringView gyroCalDoneText("Gyro calibration done");
-constexpr QLatin1StringView gyroCalCancelledText("Gyro calibration cancelled");
+constexpr QLatin1StringView gyroCalStartedText("[cal] gyro calibration started");
+constexpr QLatin1StringView gyroCalDoneText("[cal] gyro calibration done");
+constexpr QLatin1StringView gyroCalCancelledText("[cal] gyro calibration cancelled");
 
 }  // namespace
 
