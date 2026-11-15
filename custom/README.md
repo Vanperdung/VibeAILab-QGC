@@ -24,6 +24,12 @@ This folder must always contain both `CMakeLists.txt` and
 | `src/Features/<Name>/` | One folder per feature with its own code; its QML in `qml/` |
 | `resources/` | Data and images, bundled by `vibeailab.qrc` |
 
+## Features
+
+| Feature | Setup page | Follows |
+| ------- | ---------- | ------- |
+| `Sensors` | Sensors: Gyro Calibration, Accel Calibration | The FC's replies to the calibration command and its calibration status texts |
+
 ## Adding a feature
 
 | Need | QGC hook | Put code in |
@@ -35,6 +41,8 @@ This folder must always contain both `CMakeLists.txt` and
 | Brand colours, logo | `QGCCorePlugin::paletteOverride()` + images | `src/Integration/` + `resources/` |
 | Hide or adjust settings | `QGCOptions`, `overrideSettingsGroupVisibility()`, `adjustSettingMetaData()` | `src/Integration/` |
 | QML control used by 2+ features | - | `qml/Controls/` |
+
+A feature's QML goes in its own QML module in `CMakeLists.txt`.
 
 ## Rules
 
