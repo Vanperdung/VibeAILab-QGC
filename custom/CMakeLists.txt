@@ -21,6 +21,30 @@ qt_add_qml_module(VibeAILabSensorsModule
 )
 
 # ----------------------------------------------------------------------------
+# PID Tuning page QML
+# ----------------------------------------------------------------------------
+qt_add_library(VibeAILabTuningModule STATIC)
+
+qgc_set_qt_resource_alias(
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/qml/VibeAILabTuningAttitude.qml
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/qml/VibeAILabTuningComponent.qml
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/qml/VibeAILabTuningPage.qml
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/qml/VibeAILabTuningRate.qml
+)
+
+qt_add_qml_module(VibeAILabTuningModule
+    URI VibeAILab.Tuning
+    VERSION 1.0
+    RESOURCE_PREFIX /qml
+    QML_FILES
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/qml/VibeAILabTuningAttitude.qml
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/qml/VibeAILabTuningComponent.qml
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/qml/VibeAILabTuningPage.qml
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/qml/VibeAILabTuningRate.qml
+    NO_PLUGIN
+)
+
+# ----------------------------------------------------------------------------
 # Sources
 # ----------------------------------------------------------------------------
 set(CUSTOM_SOURCES
@@ -34,6 +58,8 @@ set(CUSTOM_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Sensors/VibeAILabSensorsComponent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Sensors/VibeAILabSensorsController.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Sensors/VibeAILabSensorsController.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/VibeAILabTuningComponent.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning/VibeAILabTuningComponent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabAutoPilotPlugin.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabAutoPilotPlugin.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabCorePlugin.cc
@@ -42,11 +68,14 @@ set(CUSTOM_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePlugin.h
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePluginFactory.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabFirmwarePluginFactory.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabParameterMetaData.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration/VibeAILabParameterMetaData.h
     ${CMAKE_CURRENT_SOURCE_DIR}/vibeailab.qrc
 )
 
 set(CUSTOM_INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Sensors
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Features/Tuning
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Integration
 )
 
@@ -55,6 +84,7 @@ set(CUSTOM_INCLUDE_DIRECTORIES ${CUSTOM_INCLUDE_DIRECTORIES} CACHE INTERNAL "" F
 
 set(CUSTOM_LIBRARIES
     VibeAILabSensorsModule
+    VibeAILabTuningModule
     CACHE INTERNAL "" FORCE
 )
 

@@ -11,4 +11,8 @@ public:
     explicit VibeAILabFirmwarePlugin(QObject* parent = nullptr);
 
     AutoPilotPlugin* autopilotPlugin(Vehicle* vehicle) const final;
+
+protected:
+    QString _internalParameterMetaDataFile(const Vehicle* vehicle) const final;
+    ParameterMetaData* _createParameterMetaData() final;
 };
