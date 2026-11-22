@@ -11,6 +11,7 @@
 #include "QGCLoggingCategory.h"
 #include "Vehicle.h"
 #include "VibeAILabSensorsComponent.h"
+#include "VibeAILabTuningComponent.h"
 
 QGC_LOGGING_CATEGORY(VibeAILabAutoPilotPluginLog, "VibeAILab.AutoPilotPlugin")
 
@@ -64,6 +65,10 @@ const QVariantList& VibeAILabAutoPilotPlugin::vehicleComponents()
             qCWarning(VibeAILabAutoPilotPluginLog) << "Actuators page hidden:" << actuators->initializationError();
         }
     }
+
+    auto* const tuningComponent = new VibeAILabTuningComponent(_vehicle, this, this);
+    tuningComponent->setupTriggerSignals();
+    _components.append(QVariant::fromValue(qobject_cast<VehicleComponent*>(tuningComponent)));
 
     auto* const joystickComponent = new JoystickComponent(_vehicle, this, this);
     joystickComponent->setupTriggerSignals();

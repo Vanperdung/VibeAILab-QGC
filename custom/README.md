@@ -20,7 +20,7 @@ This folder must always contain both `CMakeLists.txt` and
 
 | Path | Holds |
 | ---- | ----- |
-| `src/Integration/` | Classes QGC calls directly: core plugin, firmware plugin factory, firmware plugin, autopilot (setup) plugin |
+| `src/Integration/` | Classes QGC calls directly: core plugin, firmware plugin factory, firmware plugin, autopilot (setup) plugin, param metadata |
 | `src/Features/<Name>/` | One folder per feature with its own code; its QML in `qml/` |
 | `resources/` | Data and images, bundled by `vibeailab.qrc` |
 
@@ -29,6 +29,7 @@ This folder must always contain both `CMakeLists.txt` and
 | Feature | Setup page | Follows |
 | ------- | ---------- | ------- |
 | `Sensors` | Sensors: Gyro Calibration, Accel Calibration | The FC's replies to the calibration command and its calibration status texts |
+| `Tuning` | PID Tuning: Rate Controller and Attitude Controller tabs, Thrust Curve | The FC params `RATE_P/I/D_X/Y/Z`, `ATT_P_X/Y/Z`, `MOT_THR_CURVE`; the FC's `ATTITUDE_QUATERNION` and `ATTITUDE_TARGET` |
 
 ## Adding a feature
 
@@ -40,6 +41,7 @@ This folder must always contain both `CMakeLists.txt` and
 | Handle our own MAVLink messages | `QGCCorePlugin::mavlinkMessage()` | `src/Features/<Name>/` |
 | Brand colours, logo | `QGCCorePlugin::paletteOverride()` + images | `src/Integration/` + `resources/` |
 | Hide or adjust settings | `QGCOptions`, `overrideSettingsGroupVisibility()`, `adjustSettingMetaData()` | `src/Integration/` |
+| Param description, limits, decimal places | `FirmwarePlugin::_createParameterMetaData()` (`VibeAILabParameterMetaData`) | `resources/ParameterMetaData.json` |
 | QML control used by 2+ features | - | `qml/Controls/` |
 
 A feature's QML goes in its own QML module in `CMakeLists.txt`.

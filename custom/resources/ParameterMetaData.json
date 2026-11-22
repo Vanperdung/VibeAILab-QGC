@@ -1,0 +1,25 @@
+{
+  "parameters": [
+    { "name": "RATE_P_X", "type": "Float", "shortDesc": "Roll rate P gain", "min": 0, "max": 2, "decimalPlaces": 3 },
+    { "name": "RATE_P_Y", "type": "Float", "shortDesc": "Pitch rate P gain", "min": 0, "max": 2, "decimalPlaces": 3 },
+    { "name": "RATE_P_Z", "type": "Float", "shortDesc": "Yaw rate P gain", "min": 0, "max": 2, "decimalPlaces": 3 },
+    { "name": "RATE_I_X", "type": "Float", "shortDesc": "Roll rate I gain", "min": 0, "max": 2, "decimalPlaces": 3 },
+    { "name": "RATE_I_Y", "type": "Float", "shortDesc": "Pitch rate I gain", "min": 0, "max": 2, "decimalPlaces": 3 },
+    { "name": "RATE_I_Z", "type": "Float", "shortDesc": "Yaw rate I gain", "min": 0, "max": 2, "decimalPlaces": 3 },
+    { "name": "RATE_D_X", "type": "Float", "shortDesc": "Roll rate D gain", "min": 0, "max": 0.1, "decimalPlaces": 4 },
+    { "name": "RATE_D_Y", "type": "Float", "shortDesc": "Pitch rate D gain", "min": 0, "max": 0.1, "decimalPlaces": 4 },
+    { "name": "RATE_D_Z", "type": "Float", "shortDesc": "Yaw rate D gain", "min": 0, "max": 0.1, "decimalPlaces": 4 },
+    { "name": "ATT_P_X", "type": "Float", "shortDesc": "Roll angle P gain", "min": 0, "max": 20, "decimalPlaces": 2 },
+    { "name": "ATT_P_Y", "type": "Float", "shortDesc": "Pitch angle P gain", "min": 0, "max": 20, "decimalPlaces": 2 },
+    { "name": "ATT_P_Z", "type": "Float", "shortDesc": "Yaw angle P gain", "min": 0, "max": 20, "decimalPlaces": 2 },
+    {
+      "name": "MOT_THR_CURVE",
+      "type": "Float",
+      "shortDesc": "Thrust curve",
+      "longDesc": "How motor thrust grows with motor command: 0 = linear, 1 = quadratic.",
+      "min": 0,
+      "max": 1,
+      "decimalPlaces": 2
+    }
+  ]
+}

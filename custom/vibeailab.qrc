@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/VibeAILab">
         <file alias="ActuatorMetadata.json">resources/ActuatorMetadata.json</file>
+        <file alias="ParameterMetaData.json">resources/ParameterMetaData.json</file>
     </qresource>
 </RCC>
