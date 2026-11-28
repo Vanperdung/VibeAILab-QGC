@@ -26,7 +26,7 @@ ColumnLayout {
                 title:          qsTr("Proportional Gain (ATT_P_X)")
                 description:    qsTr("Increase for a faster angle response, reduce if the angle overshoots.")
                 param:          "ATT_P_X"
-                min:            1
+                min:            0
                 max:            10
                 step:           0.5
             }
@@ -44,7 +44,7 @@ ColumnLayout {
                 title:          qsTr("Proportional Gain (ATT_P_Y)")
                 description:    qsTr("Increase for a faster angle response, reduce if the angle overshoots.")
                 param:          "ATT_P_Y"
-                min:            1
+                min:            0
                 max:            10
                 step:           0.5
             }
@@ -62,7 +62,7 @@ ColumnLayout {
                 title:          qsTr("Proportional Gain (ATT_P_Z)")
                 description:    qsTr("Increase for a faster heading response, reduce if the heading overshoots.")
                 param:          "ATT_P_Z"
-                min:            1
+                min:            0
                 max:            10
                 step:           0.5
             }

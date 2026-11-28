@@ -28,7 +28,7 @@ ColumnLayout {
                 title:          qsTr("Proportional Gain (RATE_P_X)")
                 description:    qsTr("Main gain: increase for a faster response, reduce if the rate overshoots or shakes.")
                 param:          "RATE_P_X"
-                min:            0.05
+                min:            0
                 max:            0.5
                 step:           0.05
             }
@@ -62,7 +62,7 @@ ColumnLayout {
                 title:          qsTr("Proportional Gain (RATE_P_Y)")
                 description:    qsTr("Main gain: increase for a faster response, reduce if the rate overshoots or shakes.")
                 param:          "RATE_P_Y"
-                min:            0.05
+                min:            0
                 max:            0.5
                 step:           0.05
             }
@@ -96,7 +96,7 @@ ColumnLayout {
                 title:          qsTr("Proportional Gain (RATE_P_Z)")
                 description:    qsTr("Main gain: increase for a faster response, reduce if the rate overshoots or shakes.")
                 param:          "RATE_P_Z"
-                min:            0.05
+                min:            0
                 max:            1
                 step:           0.05
             }
